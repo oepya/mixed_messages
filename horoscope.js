@@ -1,8 +1,8 @@
-const animalArray = ['a pack of dogs', 'a bear', 'a wolf', 'ostriches', 'the honey badger', 'kitty cats', 'the dingo', 'kangaroos', 'crocodiles', 'baboons'];
+const animalArray = ['a pack of dogs', 'a bear', 'a wolf', 'ostriches', 'the honey badger', 'kitty cats', 'the dingo', 'kangaroos', 'crocodiles', 'baboons', 'a football team', 'the rockettes', 'Santa and his reindeer'];
 
-const verbArray = ['eat', 'poop on', 'serenade', 'auction off', 'laugh at', 'run off with', 'tap dance all over'];
+const verbArray = ['eat', 'poop on', 'auction off', 'make fun of', 'run off with', 'tap dance all over', 'insult', 'fart in the general direction of', 'set fire to'];
 
-const nounArray = ['face', 'baby', 'car', 'wife', 'high school yearbook photo', 'life savings'];
+const nounArray = ['face', 'baby', 'car', 'wife', 'high school yearbook photo', 'life savings', 'panties', 'mother', 'house', 'cherished memories'];
 
 function randoAnimal() {
     return animalArray[Math.floor(Math.random() * animalArray.length)];
@@ -25,18 +25,12 @@ let mainElements = galaxyContainer.children;
 
 const elementsArray = Array.from(mainElements);
 
-// let mainHeader = document.
-
-// function hideIcons() {
-//     icons.style.display = 'none';
-// }
 
 icons.forEach(element => {
     element.addEventListener('click', function() {
         elementsArray.forEach(element => {
             element.style.display = "none";
         })
-        //galaxyContainer.replaceChildren();
         let yourHoroscope = document.createElement('p');
         yourHoroscope.id = 'your-horoscope';
         yourHoroscope.innerHTML = `Your horoscope:<br/><br/>Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
@@ -46,33 +40,12 @@ icons.forEach(element => {
         retryButton.type = "button";
         retryButton.innerHTML = `Try Again`;
         galaxyContainer.appendChild(retryButton);
+        retryButton.addEventListener('click', function() {
+            yourHoroscope.style.display = 'none';
+            retryButton.style.display = 'none';
+            elementsArray.forEach(element => {
+                element.style.display = null;
+            })
+        })
         })        
     });
-
-const yourHoroscope = document.getElementById('your-horoscope');
-const retryButton = document.getElementById('retry-button');
-
-retryButton.addEventListener('click', function() {
-    yourHoroscope.style.display = none;
-    retryButton.style.display = none;
-    elementsArray.forEach(element => {
-        element.style.display = "block";
-    })
-})
-
-    // "Your horoscope: <br><br> Today " + randoAnimal() + " will " + randoVerb() + " your " + randoNoun() + "."
-
-
-
-// console.log(`Your horoscope: Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`)
-
-// let horoscopeButton = document.getElementById('horoscope-button');
-
-// horoscopeButton.onclick = showHoroscope;
-
-// function showHoroscope() {
-//     let yourHoroscope = document.getElementById('your-horoscope');
-//     yourHoroscope.innerHTML = `Your horoscope: Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
-// }
-
-

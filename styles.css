@@ -30,9 +30,6 @@
     font-weight: bolder;
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     display: grid;
     grid-template: repeat(8, 1fr) / repeat(12, 1fr);
     gap: 20px;
@@ -40,6 +37,16 @@
     justify-items: center;
     align-content: center;
     justify-content: center;
+}
+
+button.icon-container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    background-color: transparent;
+    border: none;
+    background-color: hsla(0, 0%, 0%, 0.3);
 }
 
 #hide-yellow-line {
@@ -57,6 +64,13 @@
     grid-row-start: 4;
     grid-row-end: 5;
     font-size: 32px;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#retry-button:hover {
+    cursor: pointer;
 }
 
 #retry-button {
@@ -64,26 +78,45 @@
     grid-column-end: 8;
     grid-row-start: 5;
     grid-row-end: 6;
-    font-size: 32px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     background-color: violet;
     border: 1px solid white;
+    border-radius: 20px;
 }
 
-.main-heading {
-    grid-column-start: 4;
+#main-text {
+    grid-column: 4 / 10;
+    grid-row: 2 / 4;
+    height: 100%;
+    width: auto;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+#main-heading {
+    /* grid-column-start: 4;
     grid-column-end: 10;
     grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-end: 3; */
+    /* background-color: hsla(0, 0%, 0%, 0.5);
+    padding: 20px; */
+    width: 100%;
 }
 
-.subheading {
-    grid-column: 4 / 10;
-    grid-row: 3 / 3;
+#subheading {
+    /* grid-column: 4 / 10;
+    grid-row: 3 / 4; */
+    /* background-color: hsla(0, 0%, 0%, 0.5); */
+    width: 100%;
 }
 
 .icon-container {
@@ -91,6 +124,7 @@
     max-height: 100%;
     overflow: hidden;
     /* background-color: blue; */
+    border-radius: 20px;
 }
 
 .icon-container:hover {
