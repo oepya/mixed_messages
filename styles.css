@@ -66,7 +66,7 @@ button.icon-container {
     font-size: 32px;
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: .8vw;
 }
 
 #retry-button:hover {
@@ -86,7 +86,7 @@ button.icon-container {
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     background-color: violet;
     border: 1px solid white;
-    border-radius: 20px;
+    border-radius: .8vw;
 }
 
 #main-text {
@@ -96,7 +96,7 @@ button.icon-container {
     width: auto;
     background-color: hsla(0, 0%, 0%, 0.3);
     padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: .8vw;
     display: flex;
     flex-wrap: wrap;
     align-content: space-evenly;
@@ -124,7 +124,7 @@ button.icon-container {
     max-height: 100%;
     overflow: hidden;
     /* background-color: blue; */
-    border-radius: 20px;
+    border-radius: .8vw;
 }
 
 .icon-container:hover {
@@ -206,19 +206,20 @@ button.icon-container {
 } */
 
 h1 {
-    font-size: 5rem;
+    font-size: 4vw;
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 1.6vw;
 }
 
 h3 {
-    line-height: 1.5em;
+    font-size: 1vw;
+    margin-top: .2vw;
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: .7vw;
 }
 
 
