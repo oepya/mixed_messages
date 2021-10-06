@@ -2,7 +2,7 @@ const animalArray = ['a pack of dogs', 'a bear', 'a wolf', 'ostriches', 'the hon
 
 const verbArray = ['eat', 'poop on', 'auction off', 'make fun of', 'run off with', 'tap dance all over', 'insult', 'fart in the general direction of', 'set fire to'];
 
-const nounArray = ['face', 'baby', 'car', 'wife', 'high school yearbook photo', 'life savings', 'panties', 'mother', 'house', 'cherished memories'];
+const nounArray = ['face', 'children', 'car', 'wife', 'high school yearbook photo', 'life savings', 'underwear', 'mother', 'house', 'cherished memories', 'nose'];
 
 function randoAnimal() {
     return animalArray[Math.floor(Math.random() * animalArray.length)];

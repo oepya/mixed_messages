@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Horoscope</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href="./styles.css" rel="stylesheet">
     <script defer src="./horoscope.js"></script>
 </head>
 
-<body> 
+<body>
     <!-- Covers yellow line at top of NASA photo used for background -->
     <div id="hide-yellow-line"></div>
 
-    <div id="galaxy-container">
-        
-        <div id="main-text">
-            <h1 id="main-heading">Your Daily Horoscope</h1>
-            <h2 id="subheading">Choose your sign and see what today has in store for you!</h2>
+    <div id="background-container"></div>
+
+        <div id="main-content-container">
+
+            <div id="main-text">
+                <h1 id="main-heading">Your Daily Horoscope</h1>
+                <h2 id="subheading">Choose your sign and see what today has in store for you!</h2>
+            </div>
+
+            <div id="icon-grid-container">
+                <button class="icon-container" id="aquarius">
+                    <img src="./images/aquarius.jpg" alt="aquarius" class="astro-icon">
+                    <h3>Aquarius</h3>
+                    <p>Jan 20 - Feb 18</p>
+                </button>
+
+                <button class="icon-container" id="pisces">
+                    <img src="./images/pisces.jpg" alt="pisces" class="astro-icon">
+                    <h3>Pisces</h3>
+                    <p>Feb 19 - Mar 20</p>
+                </button>
+
+                <button class="icon-container" id="aries">
+                    <img src="./images/aries.jpg" alt="aries" class="astro-icon">
+                    <h3>Aries</h3>
+                    <p>Mar 21 - Apr 19</p>
+                </button>
+
+                <button class="icon-container" id="taurus">
+                    <img src="./images/taurus.jpg" alt="taurus" class="astro-icon">
+                    <h3>Taurus</h3>
+                    <p>Apr 20 - May 20</p>
+                </button>
+
+                <button class="icon-container" id="gemini">
+                    <img src="./images/gemini.jpg" alt="gemini" class="astro-icon">
+                    <h3>Gemini</h3>
+                    <p>May 21 - Jun 20</p>
+                </button>
+
+                <button class="icon-container" id="cancer">
+                    <img src="./images/cancer.jpg" alt="cancer" class="astro-icon">
+                    <h3>Cancer</h3>
+                    <p>Jun 21 - Jul 22</p>
+                </button>
+
+                <button class="icon-container" id="leo">
+                    <img src="./images/leo.jpg" alt="leo" class="astro-icon">
+                    <h3>Leo</h3>
+                    <p>Jul 23 - Aug 22</p>
+                </button>
+
+                <button class="icon-container" id="virgo">
+                    <img src="./images/virgo.jpg" alt="virgo" class="astro-icon">
+                    <h3>Virgo</h3>
+                    <p>Aug 23 - Sep 22</p>
+                </button>
+
+                <button class="icon-container" id="libra">
+                    <img src="./images/libra.jpg" alt="libra" class="astro-icon">
+                    <h3>Libra</h3>
+                    <p>Sep 23 - Oct 22</p>
+                </button>
+
+                <button class="icon-container" id="scorpio">
+                    <img src="./images/scorpio.jpg" alt="scorpio" class="astro-icon">
+                    <h3>Scorpio</h3>
+                    <p>Oct 23 - Nov 21</p>
+                </button>
+
+                <button class="icon-container" id="sagittarius">
+                    <img src="./images/sagittarius.jpg" alt="sagittarius" class="astro-icon">
+                    <h3>Sagittarius</h3>
+                    <p>Nov 22 - Dec 21</p>
+                </button>
+
+                <button class="icon-container" id="capricorn">
+                    <img src="./images/capricorn.jpg" alt="capricorn" class="astro-icon">
+                    <h3>Capricorn</h3>
+                    <p>Dec 22 - Jan 19</p>
+                </button>
+            </div>
+
         </div>
-
-        <button class="icon-container" id="aquarius">
-            <img src="./images/aquarius.jpg" alt="aquarius" class="astro-icon">
-            <h3>Aquarius</h3>
-            <p>Jan 20 - Feb 18</p>
-        </button>
-
-        <button class="icon-container" id="pisces">
-            <img src="./images/pisces.jpg" alt="pisces" class="astro-icon">
-            <h3>Pisces</h3>
-            <p>Feb 19 - Mar 20</p>
-        </button>
-
-        <button class="icon-container" id="aries">
-            <img src="./images/aries.jpg" alt="aries"  class="astro-icon">
-            <h3>Aries</h3>
-            <p>Mar 21 - Apr 19</p>
-        </button>
-
-        <button class="icon-container" id="taurus">
-            <img src="./images/taurus.jpg" alt="taurus" class="astro-icon">
-            <h3>Taurus</h3>
-            <p>Apr 20 - May 20</p>
-        </button>
-
-        <button class="icon-container" id="gemini">
-            <img src="./images/gemini.jpg" alt="gemini" class="astro-icon">
-            <h3>Gemini</h3>
-            <p>May 21 - Jun 20</p>
-        </button>
-
-        <button class="icon-container" id="cancer">
-            <img src="./images/cancer.jpg" alt="cancer" class="astro-icon">
-            <h3>Cancer</h3>
-            <p>Jun 21 - Jul 22</p>
-        </button>
-
-        <button class="icon-container" id="leo">
-            <img src="./images/leo.jpg" alt="leo" class="astro-icon">
-            <h3>Leo</h3>
-            <p>Jul 23 - Aug 22</p>
-        </button>
-
-        <button class="icon-container" id="virgo">
-            <img src="./images/virgo.jpg" alt="virgo" class="astro-icon">
-            <h3>Virgo</h3>
-            <p>Aug 23 - Sep 22</p>
-        </button>
-
-        <button class="icon-container" id="libra">
-            <img src="./images/libra.jpg" alt="libra" class="astro-icon">
-            <h3>Libra</h3>
-            <p>Sep 23 - Oct 22</p>
-        </button>
-
-        <button class="icon-container" id="scorpio">
-            <img src="./images/scorpio.jpg" alt="scorpio" class="astro-icon">
-            <h3>Scorpio</h3>
-            <p>Oct 23 - Nov 21</p>
-        </button>
-
-        <button class="icon-container" id="sagittarius">
-            <img src="./images/sagittarius.jpg" alt="sagittarius" class="astro-icon">
-            <h3>Sagittarius</h3>
-            <p>Nov 22 - Dec 21</p>
-        </button>
-
-        <button class="icon-container" id="capricorn">
-            <img src="./images/capricorn.jpg" alt="capricorn" class="astro-icon">
-            <h3>Capricorn</h3>
-            <p>Dec 22 - Jan 19</p>
-        </button>
 
         <!-- <div class="main-text">
             <h1>Your Daily Horoscope</h1>
