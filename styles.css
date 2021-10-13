@@ -12,20 +12,6 @@
     z-index: 2;
 }
 
-/* .grid-guidlines {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    display: grid;
-    grid-template: repeat(8, 1fr) / repeat(12, 1fr);
-    gap: 10px;
-    z-index: 5;
-}
-
-.grid-item {
-    border: 1px solid yellow;
-} */
-
 #background-container {
     height: 100vh;
     width: 100vw;
@@ -37,10 +23,19 @@
     position: fixed;
 }
 
-#main-content-container {
-    max-width: 900px;
+#main-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(240px, 900px) 1fr;
+    grid-template-areas: 
+        '. main .';
+    gap: 50px;
+}
+
+main {
+    grid-area: main;
+    /* max-width: 900px;
     min-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto; */
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
@@ -48,56 +43,63 @@
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 
     display: flex;
-    flex-wrap: wrap;
-
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     min-height: 100vh;
 
     align-content: center;
+
+    justify-content: center;
 }
 
 #main-text {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     background-color: hsla(0, 0%, 0%, 0.3);
-    padding: 10px 15px;
-    border-radius: .8vw;
+    /* padding: 10px 15px;
+    
     display: flex;
     flex-wrap: wrap;
     align-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 20px 0;
 }
 
-#main-heading {
+/* #main-heading {
     width: 100%;
 }
 
 #subheading {
     width: 100%;
-}
+} */
 
 h1 {
-    font-size: 4vw;
+    font-size: 4rem;
 }
 
 h2 {
-    font-size: 1.6vw;
+    font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 1vw;
-    margin-top: .2vw;
+    font-size: 1.4rem;
+    margin-top: .4rem;
 }
 
 p {
-    font-size: .7vw;
+    font-size: .8rem;
 }
 
 #icon-grid-container {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 10px;    
+    gap: 20px;
 }
 
 .icon-container {
@@ -105,7 +107,7 @@ p {
     max-height: 100%;
     overflow: hidden;
     /* background-color: blue; */
-    border-radius: .8vw;
+    border-radius: 20px;
 }
 
 .icon-container:hover {
@@ -135,7 +137,7 @@ button.icon-container {
     font-size: 32px;
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 20px;
-    border-radius: .8vw;
+    border-radius: 20px;
 }
 
 #retry-button:hover {
@@ -151,10 +153,52 @@ button.icon-container {
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     background-color: violet;
     border: 1px solid white;
-    border-radius: .8vw;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 979px) {
+    #icon-grid-container {
+        grid-template-columns: repeat(4, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (max-width: 679px) {
+    #icon-grid-container {
+        grid-template-columns: repeat(3, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (max-width: 529px) {
+    #icon-grid-container {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #main-grid {
+        gap: 0;
+        grid-template-columns: minmax(20px, 50px) minmax(240px, 900px) minmax(20px, 50px);
+    }
 }
 
 
+/* .grid-guidlines {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(12, 1fr);
+    gap: 10px;
+    z-index: 5;
+}
+
+.grid-item {
+    border: 1px solid yellow;
+} */
 
 
+/* grid-template-areas: 
+        'aquarius pisces aries taurus gemini cancer'
+        'leo virgo libra scorpio sagittarius capricorn'; */
 
+        /* gap: clamp(20px, 10vw, 50px); */

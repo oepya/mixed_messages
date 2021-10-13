@@ -19,9 +19,9 @@ function randoNoun() {
 
 let icons = document.querySelectorAll('.icon-container');
 
-let galaxyContainer = document.getElementById('galaxy-container');
+let mainContent = document.querySelector('main');
 
-let mainElements = galaxyContainer.children;
+let mainElements = mainContent.children;
 
 const elementsArray = Array.from(mainElements);
 
@@ -34,12 +34,12 @@ icons.forEach(element => {
         let yourHoroscope = document.createElement('p');
         yourHoroscope.id = 'your-horoscope';
         yourHoroscope.innerHTML = `Your horoscope:<br/><br/>Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
-        galaxyContainer.appendChild(yourHoroscope);
+        mainContent.appendChild(yourHoroscope);
         let retryButton = document.createElement('button');
         retryButton.id = 'retry-button';
         retryButton.type = "button";
         retryButton.innerHTML = `Try Again`;
-        galaxyContainer.appendChild(retryButton);
+        mainContent.appendChild(retryButton);
         retryButton.addEventListener('click', function() {
             yourHoroscope.style.display = 'none';
             retryButton.style.display = 'none';
