@@ -31,21 +31,35 @@ icons.forEach(element => {
         elementsArray.forEach(element => {
             element.style.display = "none";
         })
-        let yourHoroscope = document.createElement('p');
-        yourHoroscope.id = 'your-horoscope';
-        yourHoroscope.innerHTML = `Your horoscope:<br/><br/>Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
-        mainContent.appendChild(yourHoroscope);
-        let retryButton = document.createElement('button');
-        retryButton.id = 'retry-button';
-        retryButton.type = "button";
-        retryButton.innerHTML = `Try Again`;
-        mainContent.appendChild(retryButton);
+        const yourHoroscope = document.getElementById('your-horoscope');
+        yourHoroscope.style.display = 'flex';
+        yourHoroscope.querySelector('h2').innerHTML = `Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
+        let retryButton = document.getElementById('retry-button');
         retryButton.addEventListener('click', function() {
-            yourHoroscope.style.display = 'none';
-            retryButton.style.display = 'none';
             elementsArray.forEach(element => {
                 element.style.display = null;
             })
         })
         })        
     });
+
+        // document.getElementById("main-grid").style.maxHeight = '100vh';
+        // document.querySelector("main").style.minHeight = 'null';
+        // document.querySelector("main").style.height = '100vh';
+
+
+        // let yourHoroscope = document.createElement('p');
+        // yourHoroscope.id = 'your-horoscope';
+        // yourHoroscope.innerHTML = `Your horoscope:<br/><br/>Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
+        // mainContent.appendChild(yourHoroscope);
+        // let retryButton = document.createElement('button');
+        // retryButton.id = 'retry-button';
+        // retryButton.type = "button";
+        // retryButton.innerHTML = `Try Again`;
+        // mainContent.appendChild(retryButton);
+        // retryButton.addEventListener('click', function() {
+        //     yourHoroscope.style.display = 'none';
+        //     retryButton.style.display = 'none';
+        //     elementsArray.forEach(element => {
+        //         element.style.display = null;
+        //     })
