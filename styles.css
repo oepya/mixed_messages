@@ -123,6 +123,10 @@ button.icon-container {
     align-items: center;
 }
 
+#your-horoscope p {
+    font-size: clamp(1.5rem, 1.75vw, 1.9rem);
+}
+
 #retry-button:hover {
     cursor: pointer;
 }
@@ -146,7 +150,7 @@ button.icon-container {
     }
 
     main {
-        padding: 40px 0;
+        margin: 40px 0;
     }
 }
 

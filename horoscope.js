@@ -31,21 +31,21 @@ icons.forEach(element => {
         elementsArray.forEach(element => {
             element.style.display = "none";
         })
+        mainContent.style.margin = '0';
         const yourHoroscope = document.getElementById('your-horoscope');
         yourHoroscope.style.display = 'flex';
-        yourHoroscope.querySelector('h2').innerHTML = `Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
+        document.getElementById('horoscope-sentence').innerHTML = `Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
         let retryButton = document.getElementById('retry-button');
         retryButton.addEventListener('click', function() {
             elementsArray.forEach(element => {
                 element.style.display = null;
             })
+            mainContent.style.margin = null;
         })
         })        
     });
 
-        // document.getElementById("main-grid").style.maxHeight = '100vh';
-        // document.querySelector("main").style.minHeight = 'null';
-        // document.querySelector("main").style.height = '100vh';
+
 
 
         // let yourHoroscope = document.createElement('p');
