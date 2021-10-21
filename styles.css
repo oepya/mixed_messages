@@ -54,6 +54,16 @@ main {
     min-width: 280px;
     box-sizing: border-box;
     padding: 20px 15px;
+    animation: zoomIn 3s ease-in 1s 1 normal both;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 h1 {
@@ -114,7 +124,6 @@ button.icon-container {
 
 #your-horoscope {
     display: none;
-    /* font-size: 32px; */
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 20px;
     border-radius: 20px;
@@ -123,6 +132,7 @@ button.icon-container {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
+    animation: zoomIn 3s ease-in 0s 1 normal forwards;
 }
 
 #your-horoscope p {
