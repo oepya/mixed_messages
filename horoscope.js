@@ -1,4 +1,4 @@
-const animalArray = ['a pack of dogs', 'a bear', 'a wolf', 'ostriches', 'the honey badger', 'kitty cats', 'the dingo', 'kangaroos', 'crocodiles', 'baboons', 'a football team', 'the rockettes', 'Santa and his reindeer'];
+const animalArray = ['a pack of dogs', 'a bear', 'a wolf', 'ostriches', 'a honey badger', 'kitty cats', 'a dingo', 'kangaroos', 'crocodiles', 'baboons', 'a football team', 'the rockettes', 'Santa and his reindeer'];
 
 const verbArray = ['eat', 'poop on', 'auction off', 'make fun of', 'run off with', 'tap dance all over', 'insult', 'fart in the general direction of', 'set fire to'];
 
