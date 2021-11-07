@@ -27,23 +27,65 @@ const elementsArray = Array.from(mainElements);
 
 
 icons.forEach(element => {
-    element.addEventListener('click', function() {
+    element.addEventListener('click', function () {
         elementsArray.forEach(element => {
             element.style.display = "none";
         })
+        let signImage = this.cloneNode(true);
+        signImage.style.all = 'unset';
+        signImage.querySelector('p').innerHTML = '';
+        let signName = signImage.querySelector('h3');
+        let astroIcon = signImage.querySelector('img');
+        signImage.insertBefore(signName, astroIcon);
+        signName.style.fontSize = 'clamp(1.5rem, 1.75vw, 1.9rem)';
+        signImage.style.height = '170px';
+        signImage.style.marginBottom = '40px';
+        
+        mainContent.style.alignItems = 'center';
         mainContent.style.margin = '0';
+        
         const yourHoroscope = document.getElementById('your-horoscope');
+        yourHoroscope.style.animation = null;
         yourHoroscope.style.display = 'flex';
-        document.getElementById('horoscope-sentence').innerHTML = `Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
+        
+        let horoscopeSentence = document.getElementById('horoscope-sentence');
+        horoscopeSentence.innerHTML = `Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
+        yourHoroscope.insertBefore(signImage, horoscopeSentence);
+        
         let retryButton = document.getElementById('retry-button');
-        retryButton.addEventListener('click', function() {
-            elementsArray.forEach(element => {
-                element.style.display = null;
-            })
-            mainContent.style.margin = null;
+        yourHoroscope.addEventListener('animationend', () => {
+            yourHoroscope.style.animation = 'fadeIn 1s ease-in 0s 1 reverse both paused';
         })
-        })        
-    });
+        
+        retryButton.addEventListener('click', function () {
+            yourHoroscope.style.animationPlayState = 'running';
+            yourHoroscope.addEventListener('animationend', function resetDom() {
+                //yourHoroscope.style.animationPlayState = 'paused';
+                //yourHoroscope.style.animation = 'fadeIn 1s ease-in 0s 1 reverse both';
+                signImage.remove();
+                elementsArray.forEach(element => {
+                    element.style.display = null;
+                })
+                mainContent.style.margin = null;
+                mainContent.style.alignItems = null;
+                document.getElementById('main-text').style.animation = 'fadeIn 1s ease-in 0s 1 normal both';
+                icons.forEach(el => {
+                    el.style.animation = 'fadeIn 1s ease-in 0s 1 normal both';
+                })
+                yourHoroscope.removeEventListener('animationend', resetDom);
+            })
+            
+        });
+    })
+});
+
+
+//Below was me trying to figure out how to assign a variable to a DOM property value
+        //let signId = this.getAttribute('id');
+        //let signSrc = this.getAttribute('src');
+        //let resultImage = yourHoroscope.querySelector('img');
+        //resultImage.setAttribute('alt', signId);
+        //resultImage.setAttribute('src', signSrc);
 
 
 

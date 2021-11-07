@@ -81,6 +81,15 @@ main {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 h1 {
     font-size: clamp(2.75rem, 4vw, 4rem);
 }
@@ -183,6 +192,7 @@ p {
 .astro-icon {
     max-width: 100%;
     max-height: 100%;
+    border-radius: 50%;
     display: block;
     margin: 0 auto;
 }
@@ -204,7 +214,8 @@ button.icon-container {
     background-color: hsla(0, 0%, 0%, 0.4);
     padding: 20px;
     border-radius: 20px;
-    min-height: 33vh;
+    height: fit-content;
+    width: fit-content;
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
@@ -231,6 +242,7 @@ button.icon-container {
     border: 1px solid white;
     border-radius: 20px;
     width: max-content;
+    margin: 10px;
 }
 
 @media screen and (max-width: 979px) {
