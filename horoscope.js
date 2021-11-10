@@ -40,28 +40,23 @@ icons.forEach(element => {
         signName.style.fontSize = 'clamp(1.5rem, 1.75vw, 1.9rem)';
         signImage.style.height = '170px';
         signImage.style.marginBottom = '40px';
-        
+
         mainContent.style.alignItems = 'center';
         mainContent.style.margin = '0';
-        
+
         const yourHoroscope = document.getElementById('your-horoscope');
         yourHoroscope.style.animation = null;
         yourHoroscope.style.display = 'flex';
-        
+
         let horoscopeSentence = document.getElementById('horoscope-sentence');
         horoscopeSentence.innerHTML = `Today ${randoAnimal()} will ${randoVerb()} your ${randoNoun()}.`;
         yourHoroscope.insertBefore(signImage, horoscopeSentence);
         
         let retryButton = document.getElementById('retry-button');
-        yourHoroscope.addEventListener('animationend', () => {
-            yourHoroscope.style.animation = 'fadeIn 1s ease-in 0s 1 reverse both paused';
-        })
-        
         retryButton.addEventListener('click', function () {
+            yourHoroscope.style.animation = 'fadeIn 1s ease-in 0s 1 reverse both paused';
             yourHoroscope.style.animationPlayState = 'running';
             yourHoroscope.addEventListener('animationend', function resetDom() {
-                //yourHoroscope.style.animationPlayState = 'paused';
-                //yourHoroscope.style.animation = 'fadeIn 1s ease-in 0s 1 reverse both';
                 signImage.remove();
                 elementsArray.forEach(element => {
                     element.style.display = null;
@@ -74,7 +69,6 @@ icons.forEach(element => {
                 })
                 yourHoroscope.removeEventListener('animationend', resetDom);
             })
-            
         });
     })
 });
