@@ -42,7 +42,7 @@ icons.forEach(element => {
         signImage.style.marginBottom = '40px';
 
         mainContent.style.alignItems = 'center';
-        mainContent.style.margin = '0';
+        mainContent.style.padding = '0';
 
         const yourHoroscope = document.getElementById('your-horoscope');
         yourHoroscope.style.animation = null;
@@ -61,7 +61,7 @@ icons.forEach(element => {
                 elementsArray.forEach(element => {
                     element.style.display = null;
                 })
-                mainContent.style.margin = null;
+                mainContent.style.padding = null;
                 mainContent.style.alignItems = null;
                 document.getElementById('main-text').style.animation = 'fadeIn 1s ease-in 0s 1 normal both';
                 icons.forEach(el => {
